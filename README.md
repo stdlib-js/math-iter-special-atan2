@@ -34,14 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-iter-special-atan2
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import iterAtan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-atan2@deno/mod.js';
+var iterAtan2 = require( '@stdlib/math-iter-special-atan2' );
 ```
 
 #### iterAtan2( y, x )
@@ -49,7 +65,7 @@ import iterAtan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-a
 Returns an [iterator][mdn-iterator-protocol] which iteratively computes the [angle][@stdlib/math/base/special/atan2] in the plane (in radians) between the positive x-axis and the ray from `(0,0)` to the point `(x,y)`.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var x = array2iterator( [ 2.0, 2.0, -1.0 ] );
 var y = array2iterator( [ 2.0, 6.0, -1.0 ] );
@@ -77,7 +93,7 @@ The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the
 If provided a numeric value as an [`iterator`][mdn-iterator-protocol] argument, the value is broadcast as an **infinite** [iterator][mdn-iterator-protocol] which **always** returns the provided value.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var y = array2iterator( [ 2.0, 6.0 ] );
 
@@ -121,8 +137,8 @@ var bool = it.next().done;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-uniform@deno/mod.js';
-import iterAtan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-atan2@deno/mod.js';
+var uniform = require( '@stdlib/random-iter-uniform' );
+var iterAtan2 = require( '@stdlib/math-iter-special-atan2' );
 
 // Create seeded iterators for generating pseudorandom numbers:
 var x = uniform( -2.0, 2.0, {
@@ -185,7 +201,7 @@ while ( true ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -241,6 +257,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [deno-url]: https://github.com/stdlib-js/math-iter-special-atan2/tree/deno
 [umd-url]: https://github.com/stdlib-js/math-iter-special-atan2/tree/umd
 [esm-url]: https://github.com/stdlib-js/math-iter-special-atan2/tree/esm
+[branches-url]: https://github.com/stdlib-js/math-iter-special-atan2/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-iter-special-atan2/main/LICENSE
 
@@ -248,9 +265,9 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/atan2]: https://github.com/stdlib-js/math-base-special-atan2/tree/deno
+[@stdlib/math/base/special/atan2]: https://github.com/stdlib-js/math-base-special-atan2
 
-[@stdlib/math/iter/special/atan]: https://github.com/stdlib-js/math-iter-special-atan/tree/deno
+[@stdlib/math/iter/special/atan]: https://github.com/stdlib-js/math-iter-special-atan
 
 <!-- </related-links> -->
 
