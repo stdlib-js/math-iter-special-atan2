@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2020 The Stdlib Authors.
@@ -16,15 +16,14 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var iterMap2 = require( '@stdlib/math-iter-tools-map2' );
-var atan2 = require( '@stdlib/math-base-special-atan2' );
+import { Iterator as Iter, IterableIterator } from '@stdlib/types/iter';
 
-
-// MAIN //
+// Define a union type representing both iterable and non-iterable iterators:
+type Iterator = Iter | IterableIterator;
 
 /**
 * Returns an iterator which iteratively computes the angle in the plane (in radians) between the positive x-axis and the ray from `(0,0)` to the point `(x,y)`.
@@ -36,19 +35,14 @@ var atan2 = require( '@stdlib/math-base-special-atan2' );
 * -   The length of the returned iterator is equal to the length of the shortest provided iterator. In other words, the returned iterator ends once **one** of the provided iterators ends.
 * -   If an environment supports `Symbol.iterator` and all provided iterators are iterable, the returned iterator is iterable.
 *
-* @param {(Iterator|number)} y - input iterator
-* @param {(Iterator|number)} x - input iterator
-* @throws {TypeError} first argument must be either an iterator protocol-compliant object or a number
-* @throws {TypeError} second argument must be either an iterator protocol-compliant object or a number
-* @returns {Iterator} iterator
+* @param y - input iterator
+* @param x - input iterator
+* @returns iterator
 *
 * @example
-* var uniform = require( '@stdlib/random-iter-uniform' );
+* var uniform = require( `@stdlib/random/iter/uniform` );
 *
-* var x = uniform( -2.0, 2.0 );
-* var y = uniform( -2.0, 2.0 );
-*
-* var iter = iterAtan2( y, x );
+* var iter = iterAtan2( uniform( -2.0, 2.0 ), uniform( -2.0, 2.0 ) );
 *
 * var r = iter.next().value;
 * // returns <number>
@@ -61,11 +55,9 @@ var atan2 = require( '@stdlib/math-base-special-atan2' );
 *
 * // ...
 */
-function iterAtan2( y, x ) {
-	return iterMap2( y, x, atan2 );
-}
+declare function iterAtan2( y: Iterator | number, x: Iterator | number ): Iterator;
 
 
 // EXPORTS //
 
-module.exports = iterAtan2;
+export = iterAtan2;
