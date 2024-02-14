@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import iterAtan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-atan2@deno/mod.js';
+import iterAtan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-atan2@v0.2.0-deno/mod.js';
 ```
 
 #### iterAtan2( y, x )
@@ -133,7 +133,7 @@ var bool = it.next().done;
 
 ```javascript
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-uniform@deno/mod.js';
-import iterAtan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-atan2@deno/mod.js';
+import iterAtan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-atan2@v0.2.0-deno/mod.js';
 
 // Create seeded iterators for generating pseudorandom numbers:
 var x = uniform( -2.0, 2.0, {
